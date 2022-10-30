@@ -1,0 +1,269 @@
+/* it is the continuation from HTML5 Semantics */
+
+/* we are going to do a static position */
+/* notice that there is no change  */
+/* we want the welcome to mario club inside the banner. So we have to give the banner a position
+property as well. */
+
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+
+    /* position:relative;
+    left: 100px;
+    /* shift to the right by 100px. shift away from the left by 100px 
+    top:100px;
+    and the image did not move. */
+    background-color: #f63232;
+    padding: 20px;
+    text-align: center;
+    position: fixed; 
+    /* so fixed as well does not take on space */
+    width: 100%;
+    /* this means that it goes to 100% of the view poll weight */
+    /* to bring it forward. we are going to use the z-index. */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* so that we have zero from the top and the left */
+    
+}
+
+header h1{
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    /* the first padding value is the top and bottom and the other left and 
+    right */
+    display: inline-block;
+    /* border radius for curvered corners */
+    border-radius: 36px;
+}
+
+
+
+/* sticky becomes fixed once it is about to pass the header */
+
+.banner{
+    position: relative;
+    /* we want to get the image of the banner smaller */
+}
+.banner img{
+    max-width: 100%;
+    /* since 100px is the max of the view poll */
+}
+   
+
+.banner .welcome{
+    background-color: #feb614;
+    color: white;
+    padding: 30px;
+    /* we are adding the padding to space it all around.  */
+    position: absolute;
+    /* when we make something absolute we remove it from the flow of the document. Therefore, we lose the space that it had. */
+    left: 0px;
+    top: 30%;
+    /* to make the position kind of relative to the banner always. use percentages instead.*/
+}
+
+.welcome h2{
+    font-size: 74px;
+}
+
+.banner h2 span{
+    font-size: 1.3em;
+    /* what this does is it gets the initial value and 
+    multiplies that with 1.3  */
+}
+
+/* we like the header to stay at the top all the time. use fixed */
+
+/* we want to position the banner relatively instead.  */
+
+nav{
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky;
+    top: 106px;
+}
+
+nav ul{
+    white-space: nowrap;
+    /* this means that it is not going to wrap on the next line */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* this margin auto one automatically divides the right and 
+    left space so that the content is centered */
+      
+}
+
+nav li{
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+    /* but the last one goes to another line. in inline-block, all
+    of them should add up to 100% fix this by going back to the 
+    parent and setting the white-space to no wrap.*/
+
+}
+
+nav li a{
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+nav li a.joinl{
+    color: #f63232;
+}
+
+main{
+    max-width: 100%;
+    width: 1200px;
+    /* this is for when a view poll of the website is less than 
+    1200 then in that case the max we can have is just adjusting that
+    width to the device. */
+    margin: 80px auto;
+    padding: 0 40px;
+    /* combatting the padding so that it does not get out of page */
+    box-sizing: border-box;
+}
+
+article h2{
+    color:#f63232;
+    font-size: 48px;
+}
+
+article p{
+    line-height: 2em;
+    /* it is for the vertical space between lines */
+    color: #4b4b4b;
+}
+
+.images{
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+
+.images li{
+    display: inline-block;
+    /* so that they can sit next to each other and we 
+    can use padding and margins correctly */
+    width: 40%;
+    margin: 20px 5%;
+}
+
+.images li img{
+    max-width: 100%;
+}
+
+.join{
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+    color:#4b4b4b;
+}
+
+.join h2{
+    font-size: 36px;
+}
+
+form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 28px;
+    border: 4px solid white;
+}
+
+footer{
+    background-color: #f63232;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* for the media queries so that the content is still good, check what needs to be 
+changed.*/
+
+@media screen and (max-width:1400px){
+    /* this is to say that we are targetind devices with screens. and the condition is
+    going to be that they have the above max-width */
+    /* we want these styles to apply when we have the 1400px or below you can also 
+    set the condition of min-width*/
+    .banner .welcome h2{
+        font-size: 60px;
+
+    }
+
+    nav li{
+        font-size:18 px;
+    }
+}
+
+@media screen and (max-width:960px){
+    .banner .welcome h2{
+        font-size:40px;
+    }
+}
+
+/* then keep on diminishing the screen till you see something weird then work with that */
+
+@media screen and (max-width: 700px){
+    .banner .welcome{
+        position: relative;
+        /* this will take the welcome back to where it was. below the image */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .banner .welcome br{
+        display: none;
+        /* this is going to remove the br tag from the document. */
+
+    }
+
+    .banner .welcome h2{
+        font-size: 25px;
+    }
+
+    /* to have all of them in the same font-size */
+
+    .banner .welcome span{
+        font-size: 1em;
+    }
+
+    .images li{
+        width: 100%;
+        /* so that the images now sit on top of each other */
+        margin: 20 px auto;
+        display: block;
+    }
+
+    /* at about 500px the links get squished together so let us work on that as well*/
+}
+
+@media screen and (max-width: 560px) {
+    nav li{
+        font-size: 20px;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+    }
+
+    /* at this point we are going to make the header not have the fixed position */
+
+    header{
+        position: relative;
+    }
+    
+    nav{
+        top: 0;
+        /* this is so that the nav bar sticks to the top. */
+    }
+}

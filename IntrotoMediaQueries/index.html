@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- to add the viewport meta tag -->
+        <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>MarioClub</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Marioclub</h1>
+        </header>
+        <!-- then the section for the banner -->
+        <section class="banner">
+            <img src="banner.png" alt="Marioclub welcome banner">
+            <!-- then a div for a little welcome message on the banner itself -->
+            <div class="welcome">
+                <h2>Welcome to <br><span>Marioclub</span></h2>
+            <!-- then the span since we want to hook into it and style it --> 
+            </div>
+        </section>
+        <!-- then a little navigation under the banner using nav another html 5
+        semantic tag-->
+        <nav class="main-nav">
+            <!-- this is going to be list items and each one of them is going to
+            contain a link -->
+            <ul>
+                <li><a href="/join.html" class="joinl">Join the club</a></li>
+                <li><a href="/news.html">Latest news</a></li>
+                <li><a href="/games.html">New games</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h2>It's a me, Mario</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Quaerat asperiores, harum ipsum aliquam sapiente architecto? 
+                    Corporis, quibusdam sequi est dicta illo facilis vel impedit, 
+                    ratione harum enim porro dolorem commodi! Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Placeat nesciunt nisi 
+                    maxime error quia. Iure, nesciunt labore adipisci dolorum 
+                    fugiat ipsa explicabo perspiciatis illum nihil, atque corporis 
+                    repudiandae, repellendus quia. Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit. Natus iusto delectus repellendus 
+                    aliquam quis culpa numquam, iure quos animi quas facere adipisci 
+                    ullam fuga unde debitis asperiores possimus quisquam mollitia?`</p>
+            </article>
+            <ul class="images"  >
+                <li><img src="thumb-1.png" alt="mario thumb 1"></li>
+                <li><img src="thumb-2.png" alt="mario thumb 2"></li>
+            </ul>
+        </main>
+
+        <section class="join">
+            <h2>Join Today!</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Quos nihil quam voluptatum, nulla minus perspiciatis dolor 
+                at sunt ipsa debitis distinctio nobis ea repellendus 
+                veritatis eveniet sed corporis eaque officiis!</p>
+            <form>
+                <!-- we do not need the action since we are not sending it to the 
+                server -->
+                <input type="email" name="email" placeholder="Type email & hit enter" required>
+            </form>
+        </section>
+
+        <footer>
+            <p class="copyright">Copyright 2022 Marioclub</p>
+        </footer>
+        
+    </body>
+</html>
